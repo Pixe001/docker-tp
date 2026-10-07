@@ -1,0 +1,8 @@
+services:
+  web:
+    image: nginx:latest
+    ports:
+      # port de la machine : port exposé par l'image (80 par défaut)
+      - "8083:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
